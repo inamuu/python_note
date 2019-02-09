@@ -2,7 +2,7 @@
 
 https://qiita.com/74th/items/c06ec8f472c915ea94f9
 
-# involeのinstall
+# invokeのinstall
 
 ```sh
 ~/G/h/task-runner ❯❯❯ pip3 install invoke
@@ -11,6 +11,16 @@ Collecting invoke
     100% |████████████████████████████████| 215kB 4.1MB/s
 Installing collected packages: invoke
 Successfully installed invoke-1.2.0
+```
+
+# タスクの一覧を確認
+
+```sh
+~/G/h/task-runner ❯❯❯ /usr/local/bin/invoke -l
+Available tasks:
+
+  createfile
+  hello
 ```
 
 # タスクの実行
