@@ -1,6 +1,7 @@
 import sys
 
 def help():
+    command_name = sys.argv[0]
     helpmsg = """
   ヘルプだよ
   引数を1つだけ指定してね
