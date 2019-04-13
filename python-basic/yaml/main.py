@@ -1,6 +1,6 @@
 # coding: utf-8
 
-import sys
+import yaml
 
 def main():
     print('hello world')
