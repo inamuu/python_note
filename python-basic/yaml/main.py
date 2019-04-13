@@ -3,6 +3,8 @@
 import yaml
 
 def main():
-    print('hello world')
+    with open('test.yaml') as file:
+        yml = yaml.load(file)
+        print(yml)
 
 if __name__ == '__main__': main()
