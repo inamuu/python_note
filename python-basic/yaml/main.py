@@ -15,9 +15,9 @@ def main():
       print('not in')
       return
 
-    val = yml[args]
+    val  = yml[args]
     name = yml[args]['name']
-    age = yml[args]['age']
+    age  = yml[args]['age']
     print(val)
     print(name)
     print(age)
