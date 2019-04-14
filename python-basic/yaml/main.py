@@ -12,8 +12,8 @@ def main():
 
     ## Keyの存在チェック. Valueはチェックしないので注意.
     if args not in yml:
-      print('そのKeyは存在しないよ')
-      return
+        print('そのKeyは存在しないよ')
+        return
 
     student = yml[args]
     name    = yml[args]['name']
@@ -21,6 +21,5 @@ def main():
     print('配列: %s' % student)
     print('名前: %s' % name)
     print('年齢: %s' % age)
-
 
 if __name__ == '__main__': main()
