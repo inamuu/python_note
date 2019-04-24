@@ -2,7 +2,7 @@
 
 ツール作るときにtemplatesをコピーして使うと便利そう。
 
-### Setup
+## Setup
 
 .env.sampleをコピーして.envを作り、中身をAWS Credentialsにあわせて修正する。
 
@@ -10,16 +10,20 @@
 cp .env.sample .env
 ```
 
-### Install
+## Install
 
 ```sh
 pip3 install -r requirements.txt -t site-packages
 ```
 
-### Usage
+## Usage
 
 使い方
 
 ```sh
 python3 main.py 
 ```
+
+## 参考にしたURL
+
+- https://pygithub.readthedocs.io/en/latest/introduction.html
