@@ -1,6 +1,8 @@
 # coding: utf-8
 
-import sys
+import os, sys
+from os.path import join, dirname
+from dotenv import load_dotenv
 from github import Github
 
 def main():
