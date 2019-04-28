@@ -8,4 +8,4 @@ def main():
         elif choice == 'n':
             print('no')
 
-if __name__ == '__main__': main():
+if __name__ == '__main__': main()
