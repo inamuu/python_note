@@ -2,7 +2,7 @@
 
 def main():
     while True:
-        choice = raw_input('please input [y/n] ')
+        choice = input('please input [y/n]: ')
         if choice in ['y', 'yes']:
             print('yes!')
             return True
