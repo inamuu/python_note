@@ -2,8 +2,8 @@
 
 def main():
     while True:
-        choice = input('please input [y/n]: ')
-        if choice in ['y', 'yes']:
+        choice = input('please input [y/n]: ').lower()
+        if choice == ['y']:
             print('yes!')
             return True
         elif choice in ['n', 'no']:
