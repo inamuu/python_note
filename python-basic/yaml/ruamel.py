@@ -24,5 +24,6 @@ def main():
     print('配列: %s' % student)
     print('名前: %s' % name)
     print('年齢: %s' % age)
+    print('学校: %s' % school)
 
 if __name__ == '__main__': main()
