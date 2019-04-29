@@ -1,10 +1,10 @@
 # coding: utf-8
 
-import yaml
+import ruamel
 import sys
 
 def main():
-    with open('pyyaml.yaml') as file:
+    with open('ruamel.yaml') as file:
         yml = yaml.full_load(file)
 
     ## コマンドライン引数
