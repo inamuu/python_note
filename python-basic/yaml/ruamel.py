@@ -1,11 +1,14 @@
 # coding: utf-8
 
 import ruamel
+import ruamel.yaml
 import sys
+
+yaml = ruamel.yaml.YAML()
 
 def main():
     with open('ruamel.yaml') as file:
-        yml = yaml.full_load(file)
+        yml = yaml.load(file)
 
     ## コマンドライン引数
     args = sys.argv[1]
