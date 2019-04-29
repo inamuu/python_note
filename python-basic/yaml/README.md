@@ -13,7 +13,7 @@ cp .env.sample .env
 ### Install
 
 ```sh
-pip3 install -r requirements.txt -t site-packages
+pip3 install -r requirements.txt
 ```
 
 ### Usage
@@ -21,5 +21,16 @@ pip3 install -r requirements.txt -t site-packages
 使い方
 
 ```sh
-python3 main.py 
+$ python main.py student1
+配列: {'name': 'taro', 'age': 20}
+名前: taro
+年齢: 20
+$ python main.py student2
+配列: {'name': 'jiro', 'age': 21}
+名前: jiro
+年齢: 21
+$ python main.py student3
+配列: {'name': 'saburo', 'age': 17}
+名前: saburo
+年齢: 17
 ```
