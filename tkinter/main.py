@@ -4,6 +4,9 @@ import sys
 import tkinter as tk
 
 def main():
-    print('hello world')
+    root = tk.Tk()
+    root.title(u"Test Tools")
+    root.geometry("400x300")
+    root.mainloop()
 
 if __name__ == '__main__': main()
