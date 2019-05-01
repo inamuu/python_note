@@ -13,8 +13,13 @@ def repos():
     for repo in g.get_user().get_repos():
         print(repo.name)
 
-def main():
+def main(args):
+    if args == 'repos':
+        repos()
+    else:
+        print('そんな関数ないよ')
+        return
 
-    repos()
-
-if __name__ == '__main__': main()
+if __name__ == '__main__':
+    args = sys.argv[1]
+    main(args)
