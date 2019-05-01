@@ -13,9 +13,15 @@ def repos():
     for repo in g.get_user().get_repos():
         print(repo.name)
 
+def orgsrepos():
+    for repo in g.get_organization(os.environ.get("github_orgs")).get_repos():
+        print(repo.name)
+
 def main(args):
     if args == 'repos':
         repos()
+    elif args == 'orgsrepos':
+        orgsrepos()
     else:
         print('そんな関数ないよ')
         return
