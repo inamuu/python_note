@@ -5,3 +5,4 @@
 - system-command: Linuxコマンド実行させたいやつ 
 - python-basic: Pythonの基本的な使い方のテスト
   - subcommand: argparseを使ってサブコマンドを実装するやつ 
+- tkinter: GUIツール
