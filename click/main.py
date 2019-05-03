@@ -10,6 +10,10 @@ def subcommand():
 def helloa():
     print('Hello A')
 
+@subcommand.command()
+def hellob():
+    print('Hello B')
+
 def main():
     subcommand()
 
