@@ -6,11 +6,11 @@ import click
 def subcommand():
     pass
 
-@subcommand.command()
+@subcommand.command(help='hello Aだよ')
 def helloa():
     print('Hello A')
 
-@subcommand.command()
+@subcommand.command(help='hello Bだよ')
 def hellob():
     print('Hello B')
 
