@@ -2,7 +2,15 @@
 
 import click
 
+@click.group()
+def subcommand():
+    pass
+
+@subcommand.command()
+def helloa():
+    print('Hello A')
+
 def main():
-    print('hello world')
+    subcommand()
 
 if __name__ == '__main__': main()
