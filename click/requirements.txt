@@ -1,2 +1,2 @@
-argparse
+click
 python-dotenv
