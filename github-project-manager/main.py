@@ -24,6 +24,11 @@ def orgsrepos():
     for repo in g.get_organization(os.environ.get("github_orgs")).get_repos():
         print(repo.name)
 
+@subcommand.command(help='projects')
+def projects():
+    for repo in g.get_user().get_project(1640570):
+        print(repo.name)
+
 def main():
     subcommand()
 
