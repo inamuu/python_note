@@ -2,22 +2,39 @@
 
 import os
 from sendgrid import SendGridAPIClient
-from sendgrid.helpers.mail import *
+from sendgrid.helpers.mail import Mail
 
 MAILFROM=os.environ['MAILFROM']
 MAILTO=os.environ['MAILTO']
 
 def main():
-    mail = Mail()
-    mail.from_email = Email(MAILFROM)
-    mail.template_id = 'd-your-dynamic-template-uid'
-    p = Personalization()
-    p.add_to(Email('user@example.com'))
-    p.dynamic_template_data = {
-        'name': 'Bob',
-        'balance': 42
+    {
+        "to": [
+            MAILTO,
+        ],
+        "sub": {
+            ":name": [
+                "Alice",
+                "Bob"
+            ],
+            ":price": [
+                "$4",
+                "$4"
+            ]
+        },
+        "category": [
+            "Promotions"
+        ],
+        "filters": {
+            "templates": {
+                "settings": {
+                    "enable": 1,
+                    "template_id": "60414495-6787-441b-8b08-3979499bba7a"
+                }
+            }
+        }
     }
-    mail.add_personalization(p)
+    mail = Mail()
 
     try:
         sg = SendGridAPIClient(os.environ.get('SENDGRID_APIKEY'))
@@ -26,6 +43,6 @@ def main():
         print(response.body)
         print(response.headers)
     except Exception as e:
-        print(e.mail)
+        print(e)
 
 if __name__ == '__main__': main()
