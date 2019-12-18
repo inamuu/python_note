@@ -2,16 +2,13 @@ version: 2
 jobs:
   build:
     docker:
-      - image: centos:latest
+      - image: circleci/php:7.3-stretch
+
     working_directory: ~/repo
     steps:
       - checkout
 
       - run:
-          name: pwd
-          command: pwd && ls -la
-
-      - run:
-          name: hello world
-          command: echo 'Hello World'
+          name: syntax check
+          command: php -l phptest/test.php
 
