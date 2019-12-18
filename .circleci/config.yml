@@ -11,3 +11,7 @@ jobs:
           name: pwd
           command: pwd && ls -la
 
+      - run:
+          name: hello world
+          command: echo 'Hello World'
+
