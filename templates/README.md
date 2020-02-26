@@ -1,27 +1,28 @@
-# ツール名
+# Tool Name
 
-ツール作るときにtemplatesをコピーして使うと便利そう。
+Copy this template when you create a app.
 
 ## Setup
 
-.env.sampleをコピーして.envを作り、中身をAWS Credentialsにあわせて修正する。
+Setup venv enviroment.
+
+```sh
+python -m venv ~/.venv/TOOLNAME
+source ~/.venv/TOOLSNAME/bin/activate
+cd TOOLSPATH
+pip install -r requirements.txt
+```
+
+Copy .env.sample to .env.
 
 ```sh
 cp .env.sample .env
 ```
 
-## Install
-
-```sh
-pip3 install -r requirements.txt -t site-packages
-```
-
 ## Usage
 
-使い方
-
 ```sh
-python3 main.py 
+python main.py 
 ```
 
-## 参考にしたURL
+## Reference pages or URL
