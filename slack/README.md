@@ -22,7 +22,7 @@ cp .env.sample .env
 ## Usage
 
 ```sh
-python main.py 
+slack_webhook_url=https://hooks.slack.com/services/XXXXX py main.py 
 ```
 
 ## Reference pages or URL
