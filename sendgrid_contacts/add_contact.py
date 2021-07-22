@@ -32,7 +32,7 @@ def add_contact_sendgrid(mail, firstname, lastname, tel, sex):
             }     
         ]
     }
-​
+
     ENDPOINT_URL = "https://api.sendgrid.com/v3/marketing/contacts"
     response = requests.put(ENDPOINT_URL, data=json.dumps(payload), headers=headers)    
     print(response)
