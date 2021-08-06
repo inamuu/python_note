@@ -1,19 +1,16 @@
 # coding: utf-8
 
 import json
-from jinja2 import Template
+from jinja2 import Environment, FileSystemLoader, Template
 
 def main():
 
-    json_file_open = open('event.json', 'r')
+    json_file_open = open('event_02.json', 'r')
     json_data = json.load(json_file_open)
-    print(json_data['last_name'])
 
-    #template_json = open('templates/slack.json.j2', 'r')
-    #template_data = json.load(template_json)
-    template_data = "氏名: {{first_name}} {{last_name}}"
+    env = Environment(loader = FileSystemLoader('./templates'))
+    template = env.get_template('slack.json.j2')
 
-    template = Template(template_data)
     payload = template.render(json_data)
     print(payload)
 
