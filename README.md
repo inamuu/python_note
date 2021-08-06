@@ -6,7 +6,9 @@
 - python-basic: Pythonの基本的な使い方のテスト
   - args: 引数テスト
   - argv: コマンド引数テスト
+  - jinja2: テンプレートエンジン
   - subcommand: argparseを使ってサブコマンドを実装するやつ 
   - yaml: yamlファイルを読む
   - yesno: yesnoプロンプト
+- sendgrid: SendGrid ライブラリ
 - tkinter: GUIツール
