@@ -3,10 +3,12 @@
 import json
 from jinja2 import Template
 
+import os
+
 def main():
 
     """入力データ"""
-    json_file_open = open('event.json', 'r')
+    json_file_open = open(os.path.dirname(__file__) + '/event.json', 'r')
     json_data = json.load(json_file_open)
 
     """出力用テンプレート"""
