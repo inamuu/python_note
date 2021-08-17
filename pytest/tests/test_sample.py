@@ -1,6 +1,6 @@
 # cofing:utf-8
 
-from apps.main import main
+from apps.handler import main
 
 import pytest
 
