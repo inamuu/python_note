@@ -1,17 +1,17 @@
 on:
   schedule:
-  - cron: * * * * *
+    - cron: "* * * * *"
 
 jobs:
   hi:
-    name: Hi
+    name: TEST
     runs-on: ubuntu-latest
-strategy:
-matrix:
-branch:
-- dev
+    strategy:
+    matrix:
+    branch:
+      - dev
     steps:
-    - uses: actions/checkout@v2
-      with:
-        ref: ${{ matrix.branc }}
-    - run: echo I've checked out the `${{ matrix.branch }}` branch
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ matrix.branc }}
+      - run: echo I've checked out the `${{ matrix.branch }}` branch
