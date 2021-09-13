@@ -19,6 +19,13 @@ list_a: list = [
                 "null"
             ]
         },
+        "DATA": {
+            "type": "TYPED",
+            "value": {
+                "id": 123,
+                "value": "hoge"
+            }
+        }
     }
 ]
 
