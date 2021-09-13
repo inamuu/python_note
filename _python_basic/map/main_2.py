@@ -22,12 +22,20 @@ list_a: list = [
     }
 ]
 
-def hiera_list(list_a: list):
-    print(key)
+
+def hiera_list(list_a: dict):
+    flatten_list = {}
+    for k, v in list_a.items():
+        key = k.lower()
+        val = v['value']
+        flatten_list[key] = val
+    return flatten_list
 
 
 def main():
     data = list(map(hiera_list, list_a))
     return data
 
-if __name__ == '__main__': main()
+
+if __name__ == '__main__':
+    main()
