@@ -29,6 +29,7 @@ list_a: list = [
     }
 ]
 
+<<<<<<< Updated upstream
 
 def hiera_list(list_a: dict):
     flatten_list = {}
@@ -37,6 +38,12 @@ def hiera_list(list_a: dict):
         val = v['value']
         flatten_list[key] = val
     return flatten_list
+=======
+def hiera_list(list_a: dict):
+    key = list_a.
+    value = list_a.values()
+    return key, value
+>>>>>>> Stashed changes
 
 
 def main():
