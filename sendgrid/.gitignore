@@ -1,3 +1,4 @@
-site-packages
 .env
+.venv
 logs
+site-packages
