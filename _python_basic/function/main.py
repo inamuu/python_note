@@ -4,8 +4,8 @@ import sys
 
 
 def main(args):
-    helloa() if args == 'a': else helloc()
-    hellob() if args == 'b': else helloc()
+    helloa() if args == 'a' else None
+    hellob() if args == 'b' else None
 
 
 def helloa():
