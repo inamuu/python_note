@@ -1,28 +1,31 @@
 # coding: utf-8
 
-def main():
+import sys
+
+
+def main(args):
     test_data = {
         "name": "Test Taro",
         "tel": "090-1234-5678",
         "age": "30",
         "sex": "male",
-        "address": ""
+        "address": args
     }
 
-    mapping_data = [
-        "name",
-        "tel",
-        "age",
-        "sex",
-        "address"
-    ]
+    if __check_value(test_data):
+        return {"status_code": 200, "body": "success"}
 
+
+def __check_value(test_data):
+    """check each value if exists or not"""
     for k, v in test_data.items():
         if v != "":
             print(k + " : " + v)
         else:
-            print(k + " : None")
+            raise ValueError(k + " is None")
+    return True
 
 
 if __name__ == '__main__':
-    main()
+    args = sys.argv[1]
+    main(args)
