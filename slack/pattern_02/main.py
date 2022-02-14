@@ -3,15 +3,18 @@
 import os
 import requests
 
+from os.path import join, dirname
+from dotenv import load_dotenv
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
 
 def main():
     url = "https://slack.com/api/chat.postMessage"
     headers = {
         "Content-Type": "application/json; charset=UTF-8",
-        "Authorization": "Bearer {0}".format(os.environ.get("SlackBotToken"))
     }
     params = {
-        "token": os.environ.get("SLACK_VERIFY_TOKEN"),
+        "token": os.environ.get("SlackBotToken"),
         "channel": "CCPRGV8E7",
         "text": "test",
     }
