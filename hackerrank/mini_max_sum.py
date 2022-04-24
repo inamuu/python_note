@@ -14,7 +14,11 @@ import sys
 
 
 def miniMaxSum(arr):
-    print(random.random(arr))
+    sort_list = sorted(arr)
+    sort_r_list = sorted(arr, reverse=True)
+    mini = sum(sort_list[0:4])
+    max = sum(sort_r_list[0:4])
+    print(mini, max)
 
 
 if __name__ == '__main__':
