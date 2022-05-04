@@ -1,14 +1,14 @@
-version: 2
-jobs:
-  build:
-    docker:
-      - image: circleci/php:7.3-stretch
-
-    working_directory: ~/repo
-    steps:
-      - checkout
-
-      - run:
-          name: syntax check
-          command: php -l phptest/test.php
-
+#version: 2
+#jobs:
+#  build:
+#    docker:
+#      - image: circleci/php:7.3-stretch
+#
+#    working_directory: ~/repo
+#    steps:
+#      - checkout
+#
+#      - run:
+#          name: syntax check
+#          command: php -l phptest/test.php
+#
